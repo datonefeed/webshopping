@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="_09082023_NgoLeHoang_2434.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="grid-box border">
+            <div>
+                <asp:DataList ID="Dl" runat="server">
+                    <ItemTemplate>
+                        <div class ="text-size-big">
+                            <asp:LinkButton ID="LK" runat="server" Text='<%# Eval("TENLOAI") %>' CommandArgument='<%# Eval("MALOAI") %>' OnClick="LK_Click"></asp:LinkButton>
+                        </div>
+                    </ItemTemplate>
+                </asp:DataList>
+            </div>
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div>
+                <asp:Login ID="Login1" runat="server" TitleText="Thông tin đăng nhập" OnAuthenticate="Login1_Authenticate" LoginButtonText="Đăng Nhập"></asp:Login>
+                <div>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/registerPage.aspx">Đăng ký</asp:HyperLink>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

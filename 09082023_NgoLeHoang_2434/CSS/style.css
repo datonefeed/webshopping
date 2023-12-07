@@ -1,0 +1,35 @@
+﻿body {
+}
+.grid-box
+{
+    display:grid;
+    grid-template-columns: 2fr 4fr 3fr;
+}
+.flex-box
+{
+    display:flex;
+    flex-wrap:wrap;
+}
+.border > *{
+    border:1px solid black;
+}
+.border -out {
+    border: 1px solid black;
+}
+.text-size-big{
+    font-size:25px;
+}
+.grid-box-small {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+.grid-box-equal {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+.center > * {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
